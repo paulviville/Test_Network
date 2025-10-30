@@ -2,5 +2,10 @@ export default class Commands {
 	static SERVER_ID = 0XFFFFFFFF;
 
     static SET_USER = "SET_USER";
-	
+
+	static INSTANCE_LIST = "INSTANCE_LIST";
+	static INSTANCE_NEW = "INSTANCE_NEW";
+	static INSTANCE_DELETE = "INSTANCE_DELETE";
+	static INSTANCE_JOIN = "INSTANCE_JOIN";
+	static INSTANCE_LEAVE = "INSTANCE_LEAVE";
 }
