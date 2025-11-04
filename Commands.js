@@ -18,6 +18,10 @@ export default class Commands {
 	/// Sent by the USERS to leave an instance
 	static INSTANCE_LEAVE = "INSTANCE_LEAVE";
 
+	/// Sent by USERS or SERVER to signal a file transfer
+	static TRANSFER_FILE = "TRANSFER_FILE";
+	/// Sent by USERS to SERVER to request file
+	static REQUEST_FILE = "REQUEST_FILE";
 
 
 

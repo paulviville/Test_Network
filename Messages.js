@@ -135,4 +135,12 @@ export default class Messages {
 	static lambda ( senderId, lambdaData ) {
 		return this.create( Commands.LAMBDA, senderId, { lambdaData } );
 	}
+
+	static requestFile ( senderId, fileName ) {
+		return this.create( Commands.REQUEST_FILE, senderId, { fileName } );
+	}
+
+	static transferFile ( senderId, file ) {
+		return this.create( Commands.TRANSFER_FILE, senderId, { file } );
+	}
 }
