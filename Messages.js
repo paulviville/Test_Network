@@ -140,7 +140,7 @@ export default class Messages {
 		return this.create( Commands.REQUEST_FILE, senderId, { fileName } );
 	}
 
-	static transferFile ( senderId, file ) {
-		return this.create( Commands.TRANSFER_FILE, senderId, { file } );
+	static transferFile ( senderId, fileName, file ) {
+		return this.create( Commands.TRANSFER_FILE, senderId, { fileName, file } );
 	}
 }
