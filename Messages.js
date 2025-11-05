@@ -136,11 +136,15 @@ export default class Messages {
 		return this.create( Commands.LAMBDA, senderId, { lambdaData } );
 	}
 
-	static requestFile ( senderId, fileName ) {
-		return this.create( Commands.REQUEST_FILE, senderId, { fileName } );
+	static fileRequest ( senderId, fileName ) {
+		return this.create( Commands.FILE_REQUEST, senderId, { fileName } );
 	}
 
-	static transferFile ( senderId, fileName, file ) {
-		return this.create( Commands.TRANSFER_FILE, senderId, { fileName, file } );
+	static fileTransfer ( senderId, fileName, file ) {
+		return this.create( Commands.FILE_TRANSFER, senderId, { fileName, file } );
+	}
+
+	static filesList ( filesList ) {
+		return this.create( Commands.FILE_LIST, Commands.SERVER_ID, { filesList } );
 	}
 }
