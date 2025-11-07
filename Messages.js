@@ -147,4 +147,30 @@ export default class Messages {
 	static filesList ( filesList ) {
 		return this.create( Commands.FILE_LIST, Commands.SERVER_ID, { filesList } );
 	}
+
+	static encodeFile ( fileBuffer ) {
+		return this.#arrayBufferToBase64( fileBuffer );
+	}
+
+	static decodeFile ( fileBuffer ) {
+		return this.#base64ToArrayBuffer( fileBuffer );
+	}
+
+	static #arrayBufferToBase64 ( arrayBuffer ) {
+		let binary = '';
+		const bytes = new Uint8Array( arrayBuffer );
+		for ( let i = 0; i < bytes.byteLength; ++i ) {
+			binary += String.fromCharCode( bytes[i] );
+		}
+		return btoa( binary );
+	}
+
+	static #base64ToArrayBuffer ( base64 ) {
+		const binary = atob( base64 );
+		const bytes = new Uint8Array( binary.length );
+		for ( let i = 0; i < binary.length; ++i ) {
+			bytes[ i ] = binary.charCodeAt( i );
+		}
+		return bytes.buffer;
+	}
 }
