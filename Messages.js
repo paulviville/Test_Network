@@ -39,6 +39,10 @@ export default class Messages {
 		return this.create( Commands.INSTANCE_LEAVE, senderId, { instanceName } );
 	}
 
+	static instanceLoadFile ( senderId, instanceName, fileName ) {
+		return this.create( Commands.INSTANCE_LOAD_FILE, senderId, { instanceName, fileName } );
+	}
+
 	static newUser ( userId ) {
 		return this.create( Commands.NEW_USER, Commands.SERVER_ID, { userId } );
 	}

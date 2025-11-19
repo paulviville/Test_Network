@@ -17,6 +17,8 @@ export default class Commands {
 	static INSTANCE_JOIN = "INSTANCE_JOIN";
 	/// Sent by the USERS to leave an instance
 	static INSTANCE_LEAVE = "INSTANCE_LEAVE";
+	/// Sent by the USERS to load a specified file (stored server side) an instance
+	static INSTANCE_LOAD_FILE = "INSTANCE_LOAD_FILE";
 
 
 	/// Sent by USERS or SERVER to signal a file transfer
